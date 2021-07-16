@@ -1,41 +1,36 @@
 {
 	"pages": [{
             "path" : "pages/home/home",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "优购商城",
-                "enablePullDownRefresh": false
-            }
-            
+            "style" : {}          
         }
         ,{
             "path" : "pages/cate/cate",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "优购商城",
-                "enablePullDownRefresh": false
-            }
-            
+            "style" : {}   
         }
         ,{
             "path" : "pages/cart/cart",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "优购商城",
-                "enablePullDownRefresh": false
-            }
-            
+            "style" : {}    
         }
         ,{
             "path" : "pages/my/my",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "优购商城",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+           "style" : {}     
+  }],
+  "subPackages": [{
+    "root": "subpkg",
+    "pages": [{
+      "path": "goods_detail/goods_detail",
+      "style": {}
+    }    ,{
+                    "path" : "goods_list/goods_list",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
+  }],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "优购商城",
