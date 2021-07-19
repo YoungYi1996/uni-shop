@@ -89,8 +89,8 @@
 		},
 		data() {
 			return {
-				show: false,
-				showSync: false,
+				show: true,
+				showSync: true,
 				searchVal: ''
 			}
 		},
@@ -189,6 +189,7 @@
 		position: relative;
 		padding: $uni-spacing-col-base;
 		// background-color: $uni-bg-color;
+    background-color: #c00000;
 	}
 
 	.uni-searchbar__box {
