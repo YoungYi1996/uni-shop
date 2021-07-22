@@ -55,7 +55,16 @@
 		watch: {
 			value(val) {
 				this.inputValue = +val;
-			}
+			},
+      inputValue(newVal, oldVal) {
+        // 官方提供的 if 判断条件，在用户每次输入内容时，都会调用 this.$emit("change", newVal)
+        // if (+newVal !== +oldVal) {
+      
+        // 新旧内容不同 && 新值内容合法 && 新值中不包含小数点
+        if (+newVal !== +oldVal && Number(newVal) && String(newVal).indexOf('.') === -1) {
+          this.$emit("change", newVal);
+        }
+      }
 		},
 		created() {
 			this.inputValue = +this.value;
@@ -103,9 +112,10 @@
 			},
 			_onBlur(event) {
 				this.$emit('blur', event)
-				let value = event.detail.value;
+				// let value = event.detail.value;
+        let value = parseInt(event.detail.value);
 				if (!value) {
-					// this.inputValue = 0;
+					this.inputValue = 1;
 					return;
 				}
 				value = +value;
